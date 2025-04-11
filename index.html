@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jose Maria Bilazon | Portfolio</title>
+  <style>
+
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: Montserrat;
+    background-color: #0d0d0d;
+    color: #f2f2f2;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    margin-top: 3rem;
+    background-color:#0d0d0d;
+    animation: slideInTop 1s ease-out;
+  }
+
+  .hr {
+    border: 1px solid white;
+  }
+  header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+  }
+  
+  nav {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 3rem;
+    opacity: 0;
+    animation: fadeIn 1s 0.5s forwards;
+  }
+  
+  nav a {
+    display: inline-block;
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #c9a0dc;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  nav a:nth-child(2) {
+    animation-delay: 0.7s;
+  }
+  
+  nav a:nth-child(3) {
+    animation-delay: 0.9s;
+  }
+  
+  nav a:nth-child(4) {
+    animation-delay: 1.1s;
+  }
+  
+  nav a:nth-child(5) {
+    animation-delay: 1.3s;
+  }
+  
+  nav a:hover {
+    color: #00ffd5;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    font-weight: bold;
+    transform: scale(1.1); 
+  }
+
+  .gallery {
+			display: inline-block;
+			width: 250px;
+			height: 300px;
+			padding: 10px;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+			border: 2px solid #c9a0dc;
+		}
+
+		.gallery figure {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+      align-items: center;
+      text-align: center;
+			background-color: transparent;
+			box-sizing: border-box;
+      animation: fadeIn 1s ease-in-out;
+		}
+
+		.gallery img {
+			width: 100%;
+			height: 230px; 
+			object-fit: cover;
+			border:solid 1px#c9a0dc;
+			box-sizing: border-box;
+			background-color: white;
+      display: block;
+		}
+
+		.gallery img:hover {
+			transform: scale(1.1); 
+		}
+
+    .gallery-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem; 
+      flex-wrap: wrap; 
+    }
+
+  .container {
+    flex: 1;
+    padding: 2rem;
+    padding-bottom: 6rem;
+  }
+  
+  .section {
+    margin-bottom: 3rem;
+  }
+  
+  .section h2 {
+    color: #c9a0dc;
+    border-bottom: 2px solid #c9a0dc;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeInUp 1s 1.5s forwards;
+  }
+  
+  .project {
+    background-color: #1a1a1a;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeInUp 1s 1.7s forwards;
+  }
+  
+  .project h3 {
+    margin-bottom: 0.5rem;
+    color: #00ffd5;
+  }
+  
+  .p {
+    opacity: 0;
+    animation: fadeInUp 1s 2s forwards;
+  }
+  
+  footer {
+    background-color: #4b0082;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    animation: slideInBottom 1s ease-out;
+  }
+  
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    nav {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-top: 1rem;
+    }
+  
+    nav a {
+      display: inline-block;
+      margin: 0.5rem 0;
+    }
+  
+    .container {
+      padding: 1rem;
+      padding-bottom: 5rem;
+    }
+  
+    .section h2 {
+      font-size: 1.8rem;
+    }
+  
+    .project {
+      padding: 0.8rem;
+    }
+  
+    footer {
+      padding: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.8rem;
+    }
+  
+    nav a {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+    }
+  
+    .container {
+      padding: 0.8rem;
+    }
+  
+    .section h2 {
+      font-size: 1.6rem;
+    }
+  
+    .project h3 {
+      font-size: 1.2rem;
+    }
+  
+    footer {
+      font-size: 0.9rem;
+      padding: 0.5rem;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInTop {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInBottom {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  </style>
+</head>
+
+<body>
+  <header>
+    <section id="home" class="section">
+      <h1>Jose Maria Bilazon</h1>
+    </section>
+  </header>
+  <hr>
+  <section>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>  
+      <a href="#gallery">Gallery</a>  
+      <a href="#reflection">Reflection</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </section>
+
+  <div class="container">
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p class="p">Hello! I'm Jose Maria Bilazon, a 1st-year BSIT student from Dash 5. I'm passionate about web development and love creating websites that are both visually appealing and functional. I enjoy learning new technologies and applying them to solve real-world problems.</p>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="project">
+        <h3>HTML</h3>
+        <p class="p">Proficient in creating well-structured and semantic HTML documents. I focus on writing clean and accessible code.</p>
+      </div>
+      <div class="project">
+        <h3>CSS</h3>
+        <p class="p">Experienced in designing responsive websites using CSS. Familiar with Flexbox, Grid, and other layout techniques.</p>
+      </div>
+      <div class="project">
+        <h3>Responsive Design</h3>
+        <p class="p">Skilled in creating web designs optimized for desktop and larger screen sizes. Currently focused on designing for PC view, ensuring a clean and functional layout. I'm currently working on improving my mobile view making on HTML or website making.</p>
+      </div>
+      <div class="project">
+        <h3>C Programming</h3>
+        <p class="p">Proficient in using the C programming language for developing efficient and high-performance software. With a strong understanding of fundamental concepts such as memory management, pointers, and data structures, I am able to write optimized code for a wide range of applications. I am comfortable with working on both procedural programming and understanding low-level operations, which helps in building reliable programs that run efficiently on various systems.</p>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <h2>Gallery</h2>
+      <div class="gallery-container">
+        <div class="gallery">
+          <figure>
+            <img src="Guitar.png" width="150">
+            <figcaption>Random</figcaption>
+          </figure>
+        </div>
+        <div class="gallery">
+          <figure>
+            <img src="Code.png" alt="Sale Item 2" width="250">
+            <figcaption>Random</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    
+    <section id="reflection" class="section">
+      <h2>Reflection</h2>
+      <p class="p">As a beginner in C programming, I am learning the fundamentals of this powerful language, including syntax, variables, loops, conditionals, and basic data structures. I’m gaining experience in writing simple programs and understanding memory management concepts. I'm eager to deepen my understanding of C by working on projects that challenge me to apply my skills and improve my coding abilities.</p>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p class="p">Feel free to reach out via email at <a href="mailto:jmbilazon2128qc@student.fatima.edu.ph" style="color: #00ffd5;">jmbilazon2128qc@student.fatima.edu.ph</a>.</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Jose Maria Bilazon. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
